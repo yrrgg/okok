@@ -1,34 +1,34 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ray
+  name: yess
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: ray
+      app: yess
   template:
     metadata:
       labels:
-        app: ray
+        app: yess
     spec:
       containers:
       - image: okteto.dev/ray:latest
-        name: ray
+        name: yess
         ports:
         - containerPort: 8080
         env:
         - name: PORT
           value: "8080"
         - name: ProxySite
-          value: "$ProxySite"
+          value: "mirror.umd.edu"
         - name: Vless_UUID
-          value: "$Vless_UUID"
+          value: "f3931d70-fc84-4a95-bfa6-a14261a6a7f5"
         - name: Vless_Path
-          value: "$Vless_Path"
+          value: "/app"
         - name: Vmess_UUID
-          value: "$Vmess_UUID"
+          value: "f3931d70-fc84-4a95-bfa6-a14261a6a7f5"
         - name: Vmess_Path
-          value: "$Vmess_Path"
+          value: "/add"
         - name: Share_Path
-          value: "$Share_Path"
+          value: "/share233"
