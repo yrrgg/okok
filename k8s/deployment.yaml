@@ -13,7 +13,7 @@ spec:
         app: yess
     spec:
       containers:
-      - image: okteto.dev/ray:latest
+      - image: okteto.dev/yess:latest
         name: yess
         ports:
         - containerPort: 8080
